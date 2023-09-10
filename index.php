@@ -102,7 +102,7 @@
         $y = 583; // Adjust the Y-coordinate as needed
 
         // Overlay the profile image onto the card image
-        imagecopyresampled($cardImage, $profileImage, $x, $y, 0, 0, 470, 440, 470, 440);
+        imagecopyresampled($cardImage, $profileImage, $x, $y, 0, 0, $profileWidth, $profileHeight, 470, 440);
 
 
         // Output the resulting image to the browser
