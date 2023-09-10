@@ -79,7 +79,18 @@
         imagedestroy($sourceImage);
 
         $cardImage = imagecreatefromjpeg('output.jpg');
-        $profileImage = imagecreatefromjpeg($uploadedFile['tmp_name']);
+
+        $jpgExt = ["jpg", "jpeg", "png"];
+        $pngExt = ["png"];
+
+        // Get the file extension using pathinfo()
+        $file_extension = pathinfo($uploadedFile["name"], PATHINFO_EXTENSION);
+
+        if (in_array(strtolower($file_extension), $pngExt)) {
+            $profileImage = imagecreatefrompng($uploadedFile['tmp_name']);
+        } else {
+            $profileImage = imagecreatefromjpeg($uploadedFile['tmp_name']);
+        }
 
         $cardWidth = imagesx($cardImage);
         $cardHeight = imagesy($cardImage);
