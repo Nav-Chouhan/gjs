@@ -140,8 +140,8 @@
     ?>
     <div class="container my-3">
         <div class="d-flex justify-content-center mb-3">
-            <img src="/logo.png" width="200">
-            <img src="/logo2.jpg" style="border-radius: 15px;" width="200">
+            <img src="/logo.png" style="width:150px;">
+            <img src="/logo2.jpg" style="border-radius: 15px; width:200px; height:152px;">
         </div>
         <!-- zaveriba byuer mobile app -->
 
