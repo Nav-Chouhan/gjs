@@ -70,7 +70,7 @@
 
                 // Define the text to be added to the image
                 $name = $_POST['name'];
-                $stall_number = $_POST['stall_number'];
+                $stall_number = 'Stall No. : ' . $_POST['stall_number'];
 
                 // Define the color and font settings
                 $textColor = imagecolorallocate($sourceImage, 255, 255, 255);
